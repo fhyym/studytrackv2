@@ -1,0 +1,82 @@
+{
+  "student": {
+    "full_name": "John Michael Smith",
+    "nickname": "Johnny"
+  },
+  "report_period": {
+    "month_number": 7,
+    "month_name": "July",
+    "month_days": 31,
+    "year": 2026
+  },
+  "monthly_statistics": {
+    "total_study_hours": 84.5,
+    "average_study_hours_per_day": 2.73,
+    "study_days_completed": 26,
+    "failed_days": 3,
+    "waived_days": 2,
+    "bonus_earned": 12.0,
+    "bonus_used": 5.5,
+    "study_fund": 6.5,
+    "penalties_paid": 300,
+    "refunds": 50,
+    "net_penalties": 250
+  },
+  "daily_logs": [
+    {
+      "day_number": 1,
+      "day_name": "Wednesday",
+      "study_hours": 3.0,
+      "bonus_hours_earned": 0,
+      "bonus_hours_used": 0,
+      "penalty": 0,
+      "refund": 0,
+      "status": "failed",
+      "notes": "Below 6 hour requirement"
+    },
+    {
+      "day_number": 2,
+      "day_name": "Thursday",
+      "study_hours": 7.0,
+      "bonus_hours_earned": 1.0,
+      "bonus_hours_used": 0,
+      "penalty": 0,
+      "refund": 0,
+      "status": "completed",
+      "notes": "Exceeded requirement, earned bonus"
+    },
+    {
+      "day_number": 3,
+      "day_name": "Friday",
+      "study_hours": 0,
+      "bonus_hours_earned": 0,
+      "bonus_hours_used": 0,
+      "penalty": 0,
+      "refund": 0,
+      "status": "waived",
+      "notes": "Excused - family emergency"
+    },
+    {
+      "day_number": 4,
+      "day_name": "Saturday",
+      "study_hours": 0,
+      "bonus_hours_earned": 0,
+      "bonus_hours_used": 0,
+      "penalty": 100,
+      "refund": 0,
+      "status": "failed",
+      "notes": "No study, default penalty applied"
+    },
+    {
+      "day_number": 5,
+      "day_name": "Sunday",
+      "study_hours": 6.0,
+      "bonus_hours_earned": 0,
+      "bonus_hours_used": 0,
+      "penalty": 0,
+      "refund": 50,
+      "status": "completed",
+      "notes": "Made up for day 4's penalty, refund applied"
+    }
+  ]
+}
