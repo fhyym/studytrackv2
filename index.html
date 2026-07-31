@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Monthly Study Report</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --bg: #FFFFFF;
+    --text: #2F2F2F;
+    --text-secondary: #4A4A4A;
+    --header-bg: #E6E0D6;
+    --border: #D5D5D5;
+    --accent: #9B8062;
+    --notes: #555555;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 14mm 16mm;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    margin: 4mm 0 8mm 0;
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 8mm;
+  }
+
+  .info-box {
+    flex: 1;
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 13px;
+  }
+
+  .info-label {
+    background: var(--bg);
+    font-weight: 700;
+    padding: 9px 14px;
+    white-space: nowrap;
+    border-right: 1px solid var(--border);
+  }
+
+  .info-value {
+    padding: 9px 14px;
+    color: var(--text-secondary);
+  }
+
+  /* SECTION HEADER BAR */
+  .section-bar {
+    background: var(--header-bg);
+    color: var(--text);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 9px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6mm;
+    border-radius: 2px;
+  }
+
+  .section-bar .value {
+    font-weight: 800;
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    margin: 8mm 0 3mm 0;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6mm;
+    font-size: 13px;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  thead tr {
+    background: var(--header-bg);
+  }
+
+  th {
+    text-align: left;
+    font-weight: 700;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  td {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  tr.total-row td {
+    font-weight: 700;
+    background: #f7f4ee;
+  }
+
+  .num {
+    text-align: left;
+  }
+
+  /* SUMMARY STATS */
+  .summary-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 6mm 2mm 4mm 2mm;
+    margin-bottom: 2mm;
+  }
+
+  .stat {
+    flex: 1;
+    text-align: left;
+  }
+
+  .stat .stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+
+  .stat .stat-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* NOTES */
+  .notes-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin: 8mm 0 3mm 0;
+  }
+
+  .notes ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .notes li {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--notes);
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+
+  /* FOOTER LINE */
+  .footer-line {
+    margin-top: 14mm;
+    height: 3px;
+    background: linear-gradient(to right, var(--accent) 0%, var(--accent) 12%, var(--border) 12%, var(--border) 100%);
+  }
+
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="title">Monthly Study Report</div>
+
+    <div class="info-row">
+      <div class="info-box">
+        <div class="info-label">Report Month</div>
+        <div class="info-value">July 2026</div>
+      </div>
+      <div class="info-box">
+        <div class="info-label">Prepared For</div>
+        <div class="info-value">Abu Talha Fahim</div>
+      </div>
+    </div>
+
+    <div class="section-bar">
+      <span>Summary</span>
+    </div>
+
+    <div class="summary-stats">
+      <div class="stat">
+        <div class="stat-value">190.63 hrs</div>
+        <div class="stat-label">Total Hours</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">5.88 hrs</div>
+        <div class="stat-label">Average Hours</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">12.78 hrs</div>
+        <div class="stat-label">Bonus Hours</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">৳350</div>
+        <div class="stat-label">Total Penalty</div>
+      </div>
+    </div>
+
+    <div class="section-title">Daily Study Log</div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Study Time</th>
+          <th>Bonus Time</th>
+          <th>Penalty / Refund</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>01/07/2026</td><td>6h 30m</td><td>30m</td><td>—</td></tr>
+        <tr><td>02/07/2026</td><td>5h 20m</td><td>—</td><td>-৳50</td></tr>
+        <tr><td>03/07/2026</td><td>8h 10m</td><td>2h 10m</td><td>৳100</td></tr>
+        <tr><td>04/07/2026</td><td>6h 00m</td><td>—</td><td>—</td></tr>
+        <tr><td>05/07/2026</td><td>4h 15m</td><td>—</td><td>-৳100</td></tr>
+        <tr><td>06/07/2026</td><td>7h 00m</td><td>1h 00m</td><td>—</td></tr>
+        <tr><td>07/07/2026</td><td>5h 45m</td><td>—</td><td>—</td></tr>
+        <tr><td>08/07/2026</td><td>6h 20m</td><td>—</td><td>৳50</td></tr>
+        <tr><td>09/07/2026</td><td>4h 50m</td><td>—</td><td>-৳50</td></tr>
+        <tr><td>10/07/2026</td><td>7h 30m</td><td>30m</td><td>—</td></tr>
+        <tr><td>11/07/2026</td><td>6h 00m</td><td>—</td><td>—</td></tr>
+        <tr><td>12/07/2026</td><td>5h 15m</td><td>—</td><td>—</td></tr>
+        <tr><td>13/07/2026</td><td>8h 00m</td><td>1h 30m</td><td>৳100</td></tr>
+        <tr><td>14/07/2026</td><td>3h 40m</td><td>—</td><td>-৳100</td></tr>
+        <tr><td>15/07/2026</td><td>6h 10m</td><td>—</td><td>—</td></tr>
+        <tr><td>16/07/2026</td><td>7h 20m</td><td>45m</td><td>—</td></tr>
+        <tr><td>17/07/2026</td><td>5h 00m</td><td>—</td><td>-৳50</td></tr>
+        <tr><td>18/07/2026</td><td>6h 45m</td><td>—</td><td>—</td></tr>
+        <tr><td>19/07/2026</td><td>4h 30m</td><td>—</td><td>—</td></tr>
+        <tr><td>20/07/2026</td><td>8h 15m</td><td>2h 00m</td><td>৳100</td></tr>
+        <tr><td>21/07/2026</td><td>5h 50m</td><td>—</td><td>—</td></tr>
+        <tr><td>22/07/2026</td><td>6h 05m</td><td>—</td><td>—</td></tr>
+        <tr><td>23/07/2026</td><td>7h 40m</td><td>1h 15m</td><td>—</td></tr>
+        <tr><td>24/07/2026</td><td>4h 20m</td><td>—</td><td>-৳50</td></tr>
+        <tr><td>25/07/2026</td><td>6h 30m</td><td>—</td><td>—</td></tr>
+        <tr><td>26/07/2026</td><td>5h 10m</td><td>—</td><td>—</td></tr>
+        <tr><td>27/07/2026</td><td>7h 00m</td><td>30m</td><td>৳50</td></tr>
+        <tr><td>28/07/2026</td><td>6h 15m</td><td>—</td><td>—</td></tr>
+        <tr><td>29/07/2026</td><td>4h 45m</td><td>—</td><td>-৳100</td></tr>
+        <tr><td>30/07/2026</td><td>8h 00m</td><td>1h 45m</td><td>৳100</td></tr>
+        <tr><td>31/07/2026</td><td>5h 30m</td><td>—</td><td>—</td></tr>
+        <tr class="total-row">
+          <td>Total</td>
+          <td>189h 40m</td>
+          <td>11h 55m</td>
+          <td>-৳350</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="notes-title">Additional Notes</div>
+    <div class="notes">
+      <ul>
+        <li>Excellent consistency during the first half of the month.</li>
+        <li>Three study days did not meet the minimum target.</li>
+        <li>Bonus hours increased significantly during weekends.</li>
+        <li>Overall performance improved compared to last month.</li>
+      </ul>
+    </div>
+
+    <div class="footer-line"></div>
+
+  </div>
+</body>
+</html>
